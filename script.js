@@ -12,35 +12,35 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
 
-  var characterLimit = prompt("How many charaters do you want in your password? Must be between 8 and 128 charactes.")
+  var characterLimit = prompt("How many charaters do you want in your password? Must be between 8 and 128 charactes.");
   if (characterLimit < 8 || characterLimit > 128) {
-    return;
-  }
-  var lowerCase = confirm("Do you want lowercase letters?")
-  var upperCase = confirm("Do you want uppsercase letters?")
-  var special = confirm("Do you want special characters?")
-  var number = confirm("Do you want numbers?")
+    return alert("please enter valid number");
+  };
+  var lowerCase = confirm("Do you want lowercase letters?");
+  var upperCase = confirm("Do you want uppsercase letters?");
+  var special = confirm("Do you want special characters?");
+  var number = confirm("Do you want numbers?");
   var passwordCharacterOptions = ""
   if (lowerCase) {
     passwordCharacterOptions += "abcdefghijlkmnopqrstuvwxyz"
-  }
+  };
   if (upperCase) {
     passwordCharacterOptions += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  }
+  };
   if (special) {
     passwordCharacterOptions += "!@#$%^&*()_+-=?/.,><;:"
-  }
+  };
   if (number) {
     passwordCharacterOptions += "0123456789"
-  }
+  };
   var password = ""
   for (i = 0; i < Number(characterLimit); i++) {
     var randomNumber = Math.floor(Math.random() * passwordCharacterOptions.length)
     password += passwordCharacterOptions[randomNumber]
 
-  }
+  };
   return password
-}
+};
 
 
 console.log(password)
