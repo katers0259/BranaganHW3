@@ -7,9 +7,6 @@ var generateBtn = document.querySelector("#generate");
 //do you want speacial charaters?
 //do you want numbers?
 
-
-
-
 function generatePassword() {
 
   var characterLimit = prompt("How many charaters do you want in your password? Must be between 8 and 128 charactes.");
